@@ -1,0 +1,337 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+font-family: 'Roboto', sans-serif;
+}
+.main{
+    position: relative;
+    overflow-x: hidden;
+}
+.main .line{
+    display: block;
+    height: 1px;
+    background: rgb(158, 158, 158);
+    width: 100%;
+}
+.main .landing{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position:relative;
+    overflow-x: hidden;
+}
+
+.main .image_container{
+    pointer-events: none;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9999;
+}
+.main .image_container.active{
+    top: 29%;
+}
+
+.main .image_container img{
+    height: auto;
+    width: 450px;
+    z-index: 9999;
+}
+.main  .agent_content{
+    position: absolute;
+    top:10%;
+    right: -65%;
+    width: 300px;
+    color: #fff;
+    display: none;
+z-index: 99;
+}
+.main .landing video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -999;
+}
+.main .landing .list_slide{
+    display: flex;
+    overflow-x: auto;
+}
+
+.main .landing .list_slide::-webkit-scrollbar{
+    width: 0;
+}
+
+.swiper {
+    padding: 30px 0;
+    position:absolute;
+    top: 0;
+    margin: 0 0px;   
+    z-index: 999;
+  }
+.swiper-wrapper{
+    display: flex;
+
+}
+  .swiper-slide {
+    color: #fff;
+    width: auto;
+    text-align: center;
+    font-size: 35px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .swiper-slide.swiper-slide-active h3{
+    color: #ff4655;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-slide{
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      font-family: 'VALORANT', sans-serif;
+  }
+
+  .main .valo_content{
+       background: #ece8e1;
+  }
+  /* role */
+  .main .role_mobile{
+    background: #ece8e1;
+    padding: 15px;
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+.main .role_mobile .role{
+    display: flex;
+    flex-direction: column;
+}
+.main .role_mobile .role span:nth-child(1),
+.main .role_mobile .bio span:nth-child(1){
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.main .role_mobile .role span:nth-child(2){
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    
+}
+.main .role_mobile .bio{
+    display: flex;
+    flex-direction: column;
+}
+.main .role_mobile .bio span:nth-child(2){
+    color: rgb(133, 133, 133);
+    line-height: 28px;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+  /* abilities */
+  .main .abilities_container{
+      background: #ece8e1;
+      padding: 15px;
+      padding-top: 40px;
+      padding-bottom: 30px;
+  }
+
+
+
+
+  .main .abilities_container .abilities_wrapper{}
+  .main .abilities_container .abilities_wrapper h3{
+      font-weight: 800;
+      font-size: 30px;
+      margin-bottom: 35px;
+  }
+  .main .abilities_container .abilities_wrapper .ability_list{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 370px;
+      width: 100%;
+      margin: 15px auto;
+    }
+  .main .abilities_container .abilities_wrapper li{
+      cursor: pointer;
+      list-style: none;
+      border: 1px solid rgb(156, 156, 156);
+      padding: 10px;
+      background: rgb(44, 44, 44);
+  }
+  .main .abilities_container .abilities_wrapper li.skills.activeLi{
+    border: 1px solid rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .main .abilities_container .abilities_wrapper li img{
+      height: auto;
+      width: 40px;
+  }
+  .main .abilities_container .abilities_wrapper .ability_content{
+      padding: 10px 0;
+  }
+  .main .abilities_container .abilities_wrapper .ability_content .title{
+      font-weight: 800;
+      margin: 14px 0;
+      font-size: 19px;
+      color: rgb(56, 56, 56);
+    
+  }
+  .main .abilities_container .abilities_wrapper .ability_content .desc{
+    color: rgb(133, 133, 133);
+    line-height: 28px;
+    font-weight: 500;
+    font-size: 17px;
+  }
+
+  @media screen and (min-width: 767px){
+    .main .role_mobile{
+        padding:0 80px;
+        background: #ece8e1;
+       
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+    .main .abilities_container{
+        padding:0 80px;
+        background: #ece8e1;
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+  
+    .main .landing{
+        height: 575px;
+    }
+    .swiper-slide {
+        color: #fff;
+        width: auto;
+        text-align: center;
+        font-size: 50px;
+    }
+    .main .image_container img{
+        height: auto;
+        width:500px;
+    
+    }
+    .main .image_container.active{
+        top: 35%;
+    }
+    .main .landing .agent_content{
+        position: absolute;
+        top:20%;
+        right: -50%;
+        width: 300px;
+        color: #fff;
+    }
+  }
+  @media screen and (min-width:1018px){
+
+    .main .abilities_container .abilities_wrapper .ability_content .title{
+
+        margin-bottom: 20px;
+    }
+    .main .abilities_container .abilities_wrapper .ability_list{
+        max-width: 300px;
+    }
+    .main .abilities_container .abilities_wrapper h3{
+        font-weight: 800;
+        font-size: 38px;
+        margin-bottom: 35px;
+    }
+    .main .line{
+        display: none;
+    }
+    .main .abilities_container{
+
+        background: #ece8e1;
+        padding: 0 60px;
+   
+        padding-top: 100px;
+        padding-bottom: 30px;
+    }
+    .main .abilities_container .abilities_wrapper{
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+
+    }
+    .main .abilities_container .abilities_wrapper .ability_list{
+        margin: 0;
+    }
+    .main .landing .image_container{
+        pointer-events: none;
+        z-index: 99;
+        /* layout */
+        z-index: 9999;
+    }
+    .main .role_mobile{
+
+        display: none;
+    }
+    .main  .image_container img{
+        height: auto;
+        width: 600px;
+        /* position: absolute; */
+
+        }
+    .main .agent_content{
+        /* position: absolute; */
+        top:20%;
+        right: -35%;
+        width: 280px;
+        line-height: 26px;
+        color: #fff;
+        display: block;
+
+    }
+    .main .agent_content #content{
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+    }
+    .main .agent_content #content .role{
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .main .agent_content #content .role span:nth-child(2){
+        font-weight: 800;
+        font-size: 30px;
+        padding: 10px 0;
+    }
+    .main .agent_content #content .bio{
+        display: flex;
+        flex-direction: column;
+    }
+    .main .agent_content #content .bio span:nth-child(2){
+        padding: 10px 0;
+    }
+  }
