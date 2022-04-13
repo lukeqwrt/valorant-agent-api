@@ -34,7 +34,7 @@ font-family: 'Roboto', sans-serif;
     z-index: 9999;
 }
 .main .image_container.active{
-    top: 29%;
+    top: 25%;
 }
 
 .main .image_container img{
