@@ -189,7 +189,7 @@ z-index: 99;
   }
   .main .abilities_container .abilities_wrapper li.skills.activeLi{
     border: 1px solid rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.3);
+    background: rgb(236, 51, 66);
   }
   .main .abilities_container .abilities_wrapper li img{
       height: auto;
