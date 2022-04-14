@@ -129,9 +129,15 @@ const getTheIndex = (SliderIndex) => {
     
 
 }
-const selectPokemon = (desc) => {
-    console.log(desc)
-}
 
 
+
+// const displayApi = async () => {
+//     const response = await fetch('https://valorant-api.com/v1/weapons')
+//     const data = await response.json();
+//     api = data.data.map((result, index) =>( result ))
+    
+//     console.log(api)
+// };
+// displayApi()
 getTodos();

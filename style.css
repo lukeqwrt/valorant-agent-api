@@ -5,8 +5,14 @@
 
 html{
 font-family: 'Roboto', sans-serif;
+
+}
+
+body{
+    cursor: crosshair;
 }
 .main{
+    /* cursor: url(/assets/knife.png), auto; */
     position: relative;
     overflow-x: hidden;
 }
@@ -17,6 +23,7 @@ font-family: 'Roboto', sans-serif;
     width: 100%;
 }
 .main .landing{
+
     height: 500px;
     display: flex;
     justify-content: center;
@@ -51,13 +58,16 @@ font-family: 'Roboto', sans-serif;
     display: none;
 z-index: 99;
 }
-.main .landing video{
+.main .landing img{
     position: absolute;
     right: 0;
     bottom: 0;
     min-width: 100%; 
     min-height: 100%;
     z-index: -999;
+}
+.main .landing video{
+    display: none;
 }
 .main .landing .list_slide{
     display: flex;
@@ -84,7 +94,7 @@ z-index: 99;
     width: auto;
     text-align: center;
     font-size: 35px;
-
+    cursor: crosshair;
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -117,6 +127,7 @@ z-index: 99;
       align-items: flex-start;
       font-family: 'Anton', sans-serif;
       letter-spacing: 3px;
+
   }
 
   .main .valo_content{
@@ -143,6 +154,8 @@ z-index: 99;
     font-size: 35px;
     font-weight: 800;
     margin-bottom: 35px;
+    font-family: 'Poppins', sans-serif;
+      /* letter-spacing: 3px; */
     
 }
 .main .role_mobile .bio{
@@ -172,6 +185,7 @@ z-index: 99;
       font-weight: 800;
       font-size: 30px;
       margin-bottom: 35px;
+      font-family: 'Poppins', sans-serif;
   }
   .main .abilities_container .abilities_wrapper .ability_list{
       display: flex;
@@ -182,7 +196,6 @@ z-index: 99;
       margin: 15px auto;
     }
   .main .abilities_container .abilities_wrapper li{
-      cursor: pointer;
       list-style: none;
       border: 1px solid rgb(156, 156, 156);
       padding: 10px;
@@ -214,6 +227,18 @@ z-index: 99;
   }
 
   @media screen and (min-width: 767px){
+    .main .landing img{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        z-index: -999;
+        display: none;
+    }
+    .main .landing video{
+        display: unset;
+    }
     .main .role_mobile{
         padding:0 80px;
         background: #ece8e1;
