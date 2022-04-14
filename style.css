@@ -115,7 +115,8 @@ z-index: 99;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      font-family: 'VALORANT', sans-serif;
+      font-family: 'Anton', sans-serif;
+      letter-spacing: 3px;
   }
 
   .main .valo_content{
