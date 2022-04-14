@@ -38,16 +38,26 @@ body{
     top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
+
+    
     z-index: 9999;
 }
 .main .image_container.active{
+    transform: translate(-50%,-50%);
     top: 25%;
 }
+
 
 .main .image_container img{
     height: auto;
     width: 450px;
+
     z-index: 9999;
+}
+.main .image_container.active img{
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s ease;
 }
 .main  .agent_content{
     position: absolute;

@@ -40,7 +40,9 @@ const getTheIndex = (SliderIndex) => {
     const displayImage = (agent) => {
         const filteragent = agent.filter((myagent) => myagent.isPlayableCharacter == true)
         const displayIndexImage = filteragent.filter((image,index) => index == SliderIndex)
-        const DisplayImageHTML = displayIndexImage.map((result,index) => result.fullPortraitV2)
+        const DisplayImageHTML = displayIndexImage.map((result,index) => `
+        <img id="agentImage" src="${result.fullPortraitV2}" alt="random" style="visibility:visible;opacity:1;">
+        `)
         const agentAudio = displayIndexImage.map((result,index) => result.voiceLine.mediaList)
         
         // console.log(filteragent)
@@ -57,10 +59,10 @@ const getTheIndex = (SliderIndex) => {
             </div>
         `)
         audioSrc.src = mapVoice
-        agentImage.src = DisplayImageHTML
-        agentImage.parentElement.classList.add('active')
+        parent_image.innerHTML = DisplayImageHTML
+        // agentImage.parentElement.classList.add('active')
+        parent_image.classList.add('active')
         agent_content.innerHTML = agentContentHTML
-
         audio.load(); //call this to just preload the audio without playing
         audio.play();
 
@@ -130,10 +132,8 @@ const getTheIndex = (SliderIndex) => {
 
 }
 
-
-
 // const displayApi = async () => {
-//     const response = await fetch('https://valorant-api.com/v1/weapons')
+//     const response = await fetch('https://status.henrikdev.xyz/')
 //     const data = await response.json();
 //     api = data.data.map((result, index) =>( result ))
     
